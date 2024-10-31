@@ -15,7 +15,9 @@ public enum WeaponType
     phaser, // [NI] Shots that move in waves
     missile, // [NI] Homing missiles
     laser, // [NI] Damage over time
-    shield // Raise shieldLevel
+    shield, // Raise shieldLevel
+    flamethrower, //short burst of damage
+    spikes //slow recharge
 }
 
 /// <summary>
@@ -132,6 +134,46 @@ public class Weapon : MonoBehaviour {
                 p.transform.rotation = Quaternion.AngleAxis(-10, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
+            
+            case WeaponType.laser:
+            p = MakeProjectile();
+            break;
+
+            case WeaponType.flamethrower:
+            // Create a cone-shaped spread by firing projectiles at various angles
+            int numProjectiles = 30; // Number of projectiles to create for the cone effect
+            float angleStep = 2f; // Angle between each projectile
+            float startAngle = -(angleStep * (numProjectiles - 1) / 2); // Center the cone
+            for (int i = 0; i < numProjectiles; i++)
+                {
+                    float angle = startAngle + (i * angleStep);
+                    p = MakeProjectile();
+                    p.transform.rotation = Quaternion.AngleAxis(angle, Vector3.back);
+                    p.rigid.velocity = p.transform.rotation * vel * 0.7f; // Reduce velocity for a shorter range
+                    // Optional: Set a short lifespan for each projectile to simulate a quick burst
+                    Destroy(p.gameObject, 0.2f);
+                }
+            break;
+            
+            case WeaponType.spikes:
+            // Create a cone-shaped spread by firing projectiles at various angles
+            int numProjectile = 30; // Number of projectiles to create for the cone effect
+            float angleSteps = 15f; // Angle between each projectile
+            float startAngles = -(angleSteps * (numProjectile - 1) / 2); // Center the cone
+
+
+            for (int i = 0; i < numProjectile; i++)
+            {
+            float angle = startAngles + (i * angleSteps);
+            p = MakeProjectile();
+            p.transform.rotation = Quaternion.AngleAxis(angle, Vector3.back);
+            p.rigid.velocity = p.transform.rotation * vel * 0.7f; // Reduce velocity for a shorter range
+
+
+            // Optional: Set a short lifespan for each projectile to simulate a quick burst
+            Destroy(p.gameObject, 0.2f);
+            }
+            break;
         }
     }
 
