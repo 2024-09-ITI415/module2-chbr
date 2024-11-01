@@ -174,6 +174,7 @@ public class Weapon : MonoBehaviour {
             Destroy(p.gameObject, 0.2f);
             }
             break;
+            
         }
     }
 

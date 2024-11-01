@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4896700640975668}
   - component: {fileID: 33082560623235870}
   - component: {fileID: 23939130207909002}
-  - component: {fileID: 135273397436170342}
+  - component: {fileID: 5402442666657218066}
   m_Layer: 9
   m_Name: Wing
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 0.5}
+  m_LocalScale: {x: 20, y: 20, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4966457561255300}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &135273397436170342
+--- !u!135 &5402442666657218066
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 12, y: 12, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4966457561255300}
@@ -167,7 +167,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d26b0f951ccbd5742975837cec071fc6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,9 +306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 863e5a0528aa8fe44ad0d6f722c33547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  fireRate: 5
-  health: 100
+  speed: 0
+  fireRate: 1
+  health: 50
   score: 100
   showDamageDuration: 0.1
   powerUpDropChance: 1
@@ -318,8 +318,8 @@ MonoBehaviour:
   damageDoneTime: 0
   notifiedOfDestruction: 0
   moveSpeed: 1
-  bossfireRate: 5
+  bossfireRate: 1
   projectilePrefab: {fileID: 1899541879965282, guid: 47d286f4d9e53bc46a3507162f4cab19,
     type: 3}
-  projectileSpeed: 8
-  bossHealth: 200
+  projectileSpeed: 10
+  bossHealth: 100

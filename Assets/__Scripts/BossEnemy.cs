@@ -61,7 +61,7 @@ public class BossEnemy : Enemy
         if (projectilePrefab == null) return;
 
         // Fire multiple projectiles in a spread
-        int numProjectiles = 5; // Number of projectiles in each burst
+        int numProjectiles = 3; // Number of projectiles in each burst
         float angleStep = 15f; // Angle between each projectile
         float startAngle = -(angleStep * (numProjectiles - 1) / 2);
 

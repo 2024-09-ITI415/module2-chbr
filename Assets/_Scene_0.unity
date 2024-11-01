@@ -366,14 +366,23 @@ MonoBehaviour:
   - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
   - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
   - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
+  - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
+  - {fileID: 1864666716847092, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
+  - {fileID: 1801717105832950, guid: cb4206b8e00300649994ecf8ffe838d5, type: 3}
   - {fileID: 1801717105832950, guid: cb4206b8e00300649994ecf8ffe838d5, type: 3}
   - {fileID: 1801717105832950, guid: cb4206b8e00300649994ecf8ffe838d5, type: 3}
   - {fileID: 1801717105832950, guid: cb4206b8e00300649994ecf8ffe838d5, type: 3}
   - {fileID: 1158547974957732, guid: a0a74b7d2e3ac2449b0e77185af83fed, type: 3}
+  - {fileID: 1158547974957732, guid: a0a74b7d2e3ac2449b0e77185af83fed, type: 3}
+  - {fileID: 1158547974957732, guid: a0a74b7d2e3ac2449b0e77185af83fed, type: 3}
+  - {fileID: 1700942416061258, guid: 3f6055558a488314cb38691d88c41fdf, type: 3}
   - {fileID: 1700942416061258, guid: 3f6055558a488314cb38691d88c41fdf, type: 3}
   - {fileID: 1539775467464788, guid: 06677ec088bca734db80dc6ecea1d7af, type: 3}
-  - {fileID: 1864666716847092, guid: a3454997fb0b09444aefd4ee30b691ad, type: 3}
   - {fileID: 1864666716847092, guid: 4cdd900bd19485b488471d9143466d39, type: 3}
+  - {fileID: 1864666716847092, guid: 4cdd900bd19485b488471d9143466d39, type: 3}
+  - {fileID: 1864666716847092, guid: 4cdd900bd19485b488471d9143466d39, type: 3}
+  - {fileID: 1864666716847092, guid: 4cdd900bd19485b488471d9143466d39, type: 3}
+  - {fileID: 1864666716847092, guid: a3454997fb0b09444aefd4ee30b691ad, type: 3}
   enemySpawnPerSecond: 0.6
   enemyDefaultPadding: 1.5
   weaponDefinitions:
@@ -393,7 +402,7 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
     projectileColor: {r: 0, g: 0.654902, b: 1, a: 1}
-    damageOnHit: 0.5
+    damageOnHit: 0.8
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
@@ -412,8 +421,8 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
     projectileColor: {r: 1, g: 0.50980395, b: 0, a: 1}
-    damageOnHit: 0.001
-    continuousDamage: 0.001
+    damageOnHit: 0.01
+    continuousDamage: 0.01
     delayBetweenShots: 0
     velocity: 100
   - type: 8
@@ -422,13 +431,13 @@ MonoBehaviour:
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
     projectileColor: {r: 0.50980395, g: 0, b: 1, a: 1}
-    damageOnHit: 10
+    damageOnHit: 5
     continuousDamage: 0
     delayBetweenShots: 1
     velocity: 100
   prefabPowerUp: {fileID: 1062273549804748, guid: 9649a9a79085a854d9990613a980f435,
     type: 3}
-  powerUpFrequency: 010000000100000002000000060000000700000008000000
+  powerUpFrequency: 0100000001000000020000000200000006000000060000000700000008000000
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -655,7 +664,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d26b0f951ccbd5742975837cec071fc6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1157,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89945d366f74234594d375c5597c723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 40
   rollMult: -45
   pitchMult: 30
   gameRestartDelay: 2
@@ -1375,7 +1384,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70c95ce9dbbd8cf47aa5cd05269185d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
