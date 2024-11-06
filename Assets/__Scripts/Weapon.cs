@@ -49,6 +49,7 @@ public class Weapon : MonoBehaviour {
     public float lastShotTime; // Time last shot was fired
     private Renderer collarRend;
 
+
     private void Start()
     {
         collar = transform.Find("Collar").gameObject;
@@ -134,10 +135,6 @@ public class Weapon : MonoBehaviour {
                 p.transform.rotation = Quaternion.AngleAxis(-10, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
-            
-            case WeaponType.laser:
-            p = MakeProjectile();
-            break;
 
             case WeaponType.flamethrower:
             // Create a cone-shaped spread by firing projectiles at various angles

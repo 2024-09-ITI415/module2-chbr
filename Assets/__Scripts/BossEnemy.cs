@@ -10,13 +10,14 @@ public class BossEnemy : Enemy
     public float bossfireRate = 0.5f; // Time between projectile bursts
     public GameObject projectilePrefab; // Prefab for shooting at the player
     public float projectileSpeed = 8f; // Speed of the projectiles
-    public int bossHealth = 200; // Higher health for the boss
+  
 
     private float screenHalfWidth; // Adjust to move within the screen's half width
     private float birthTime;
 
     private void Start()
     {
+        StartCoroutine(FireProjectiles());
         // Set the initial horizontal limits for movement (occupying half the screen)
         Camera cam = Camera.main;
         float camHeight = cam.orthographicSize;
@@ -24,7 +25,7 @@ public class BossEnemy : Enemy
         screenHalfWidth = camWidth / 2;
 
         birthTime = Time.time;
-        StartCoroutine(FireProjectiles());
+        
     }
 
     // Override the Move function to implement a slower, large movement
@@ -38,9 +39,6 @@ public class BossEnemy : Enemy
         tempPos.x = sin * screenHalfWidth; // Horizontal movement
         pos = tempPos;
 
-        // The base class handles vertical movement
-        tempPos.y -= speed * Time.deltaTime;
-        pos = tempPos;
 
         base.Move(); // Ensure screen boundary checks and destruction logic
     }
@@ -62,7 +60,7 @@ public class BossEnemy : Enemy
 
         // Fire multiple projectiles in a spread
         int numProjectiles = 3; // Number of projectiles in each burst
-        float angleStep = 15f; // Angle between each projectile
+        float angleStep = 25f; // Angle between each projectile
         float startAngle = -(angleStep * (numProjectiles - 1) / 2);
 
         for (int i = 0; i < numProjectiles; i++)
