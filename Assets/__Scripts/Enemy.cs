@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour {
     public int score = 100; // Points earned for destroying this
     public float showDamageDuration = 0.1f; // # seconds to show damage
     public float powerUpDropChance = 1f; // Chance to drop a power-up
+    public GameObject enemyProjectile; // Enemy Projectile Prefab
+  
 
     [Header("Set Dynamically: Enemy")]
     public Color[] originalColors;
@@ -93,6 +96,7 @@ public class Enemy : MonoBehaviour {
                     if (!notifiedOfDestruction)
                     {
                         Main.S.ShipDestroyed(this);
+                        FindObjectOfType<Scoreboard>().AddScore(score);
                     }
                     notifiedOfDestruction = true;
                     // Destroy this enemy
@@ -125,4 +129,5 @@ public class Enemy : MonoBehaviour {
         }
         showingDamage = false;
     }
+     
 }
